@@ -50,6 +50,7 @@ object StringGenerationDefaults {
 			}.entries.forEach { (name, value) ->
 				try {
 					when (name as String) {
+						"tostring.exclude.private"            -> exclusionSettings.excludePrivate = (value as String).equals("true", ignoreCase = true)
 						"tostring.exclude.null"            -> exclusionSettings.excludeNull = (value as String).equals("true", ignoreCase = true)
 						"tostring.exclude.uninit"          -> exclusionSettings.excludeUninitialized = (value as String).equals("true", ignoreCase = true)
 						"tostring.exclude.list"            -> exclusionSettings.exclusionList = (value as String) / ','
