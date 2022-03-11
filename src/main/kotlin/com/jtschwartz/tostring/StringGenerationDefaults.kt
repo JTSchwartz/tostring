@@ -66,7 +66,7 @@ object StringGenerationDefaults {
 						"tostring.symbols.closing"         -> symbolSettings.closingBracket = value as String
 						"tostring.symbols.display_name"    -> symbolSettings.displayClassName = (value as String).equals("true", ignoreCase = true)
 						"tostring.symbols.opening"         -> symbolSettings.openingBracket = value as String
-						"tostring.symbols.seperator"       -> symbolSettings.separator = value as String
+						"tostring.symbols.separator"       -> symbolSettings.separator = value as String
 						"tostring.symbols.uninit"          -> symbolSettings.uninitializedValue = value as String
 					}
 				} catch (_: Exception) {
