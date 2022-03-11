@@ -4,7 +4,6 @@ val DefaultExclusions = StringGenerationDefaults.exclusionSettings
 val DefaultMutations = StringGenerationDefaults.mutationSettings
 val DefaultPostfixMask = StringGenerationDefaults.postfixMaskSettings
 val DefaultPrefixMask = StringGenerationDefaults.prefixMaskSettings
-val DefaultSort = StringGenerationDefaults.sortSettings
 val DefaultSymbols = StringGenerationDefaults.symbolSettings
 
 data class StringGenerationSettings(
@@ -12,12 +11,10 @@ data class StringGenerationSettings(
 	var mutationSettings: MutationSettings = MutationSettings(),
 	var postfixMaskSettings: PostfixMaskSettings = PostfixMaskSettings(),
 	var prefixMaskSettings: PrefixMaskSettings = PrefixMaskSettings(),
-	var sortSettings: SortSettings = SortSettings(),
 	var symbolSettings: SymbolSettings = SymbolSettings())
 
 data class ExclusionSettings(
 	override var excludeNull: Boolean = DefaultExclusions.excludeNull,
-	override var excludeNullAndUninitialized: Boolean = DefaultExclusions.excludeNullAndUninitialized,
 	override var excludeUninitialized: Boolean = DefaultExclusions.excludeUninitialized,
 	override var exclusionList: List<String> = DefaultExclusions.exclusionList,
 	override var excludePrivate: Boolean = DefaultExclusions.excludePrivate
@@ -41,10 +38,6 @@ data class MutationSettings(
 	override var propertyNameMutation: (String) -> String = DefaultMutations.propertyNameMutation,
 	override var propertyValueMutation: (Any?) -> String = DefaultMutations.propertyValueMutation
                            ): MutationSettingsContract
-
-data class SortSettings(
-	override var method: SortMethod = DefaultSort.method
-                       ): SortSettingsContract
 
 data class SymbolSettings(
 	override var assignment: String = DefaultSymbols.assignment,

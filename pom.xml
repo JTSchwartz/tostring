@@ -6,12 +6,12 @@
 
 	<groupId>com.jtschwartz</groupId>
 	<artifactId>tostring</artifactId>
-	<version>0.1.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>An incredibly customizable, yet easy to use, system for generate strings intended for toString overrides.</description>
+	<description>An incredibly customizable, yet easy to use, system to generate strings intended for toString overrides.</description>
 	<url>https://tostring.kotlin.chorecore.dev</url>
 
 	<licenses>
